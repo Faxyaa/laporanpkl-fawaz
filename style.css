@@ -1,5 +1,6 @@
 :root {
-  --cyan: #22d3ee;
+  --cyan: #e5e7eb;
+  --blue: #6b7280;
 }
 
 #matrix {
@@ -9,44 +10,64 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.12;
+  opacity: 0.08;
+  pointer-events: none;
 }
 
-.glass {
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+/* Cyber Grid Background */
+.cyber-grid {
+  background-image:
+    linear-gradient(
+      0deg,
+      transparent 24%,
+      rgba(107, 114, 128, 0.08) 25%,
+      rgba(107, 114, 128, 0.08) 26%,
+      transparent 27%,
+      transparent 74%,
+      rgba(107, 114, 128, 0.08) 75%,
+      rgba(107, 114, 128, 0.08) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      rgba(107, 114, 128, 0.08) 25%,
+      rgba(107, 114, 128, 0.08) 26%,
+      transparent 27%,
+      transparent 74%,
+      rgba(107, 114, 128, 0.08) 75%,
+      rgba(107, 114, 128, 0.08) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 50px 50px;
+  animation: grid-animation 20s linear infinite;
 }
 
-.glass-gallery {
-  background: rgba(255, 255, 255, 0.03);
-  transition: all 0.4s ease;
-}
-
-.glass-gallery:hover {
-  background: rgba(34, 211, 238, 0.05);
-  border-color: rgba(34, 211, 238, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+@keyframes grid-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
 }
 
 .nav-link {
-  transition: 0.3s;
+  transition: all 0.3s ease;
   position: relative;
-}
-
-.nav-link:hover {
-  color: var(--cyan);
 }
 
 .nav-link::after {
   content: "";
   position: absolute;
   width: 0;
-  height: 1px;
+  height: 2px;
   bottom: -4px;
   left: 0;
-  background: var(--cyan);
-  transition: 0.3s;
+  background: linear-gradient(90deg, #374151, #6b7280);
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
@@ -71,7 +92,7 @@
 
 .glitch::before {
   left: 2px;
-  text-shadow: -1px 0 var(--cyan);
+  text-shadow: -1px 0 #9ca3af;
   clip: rect(44px, 450px, 56px, 0);
   animation: glitch-anim 5s infinite linear alternate-reverse;
 }
@@ -86,12 +107,20 @@
 }
 
 .terminal-window {
-  background: rgba(2, 6, 23, 0.8);
+  background: rgba(17, 24, 39, 0.9);
 }
 
 .cmd-text {
-  color: var(--cyan);
+  color: #d1d5db;
 }
+
 .output-text {
-  color: #64748b;
+  color: #9ca3af;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .glitch {
+    font-size: 2rem;
+  }
 }

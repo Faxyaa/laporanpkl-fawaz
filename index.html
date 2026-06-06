@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PKL Report | Cyber Security Blue Edition</title>
+    <title>Fawaz Musa Thalib | PKL Report SMKN 8 Malang</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -14,552 +14,870 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/logo.png" type="image/png" />
+    <link rel="icon" href="/assets/logo.png" type="image/png" />
   </head>
   <body
-    class="bg-[#020617] text-slate-300 font-['Plus_Jakarta_Sans'] overflow-x-hidden"
+    class="bg-white text-gray-800 font-['Plus_Jakarta_Sans'] overflow-x-hidden"
   >
-    <!-- Matrix Background (Blue) -->
-    <canvas id="matrix"></canvas>
+    <div id="top"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-[100] px-6 py-4">
-      <div
-        class="max-w-7xl mx-auto glass flex justify-between items-center px-8 py-4 rounded-2xl border border-white/10"
-      >
-        <img src="assets/logo.png" alt="Logo" class="h-8" />
-        <div
-          class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-widest"
-        >
-          <a href="#about" class="nav-link">About</a>
-          <a href="#pendahuluan" class="nav-link">Pendahuluan</a>
-          <a href="#kompetensi" class="nav-link">Kompetensi</a>
-          <a href="#iduka" class="nav-link">IDUKA</a>
-          <a href="#dokumentasi" class="nav-link">Dokumentasi</a>
+    <nav
+      class="fixed w-full z-[100] px-4 py-4 bg-white shadow-lg border-b border-gray-200"
+    >
+      <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
+        <div class="flex items-center gap-3">
+          <img src="/assets/logo.png" alt="Logo" class="h-10 w-10" />
+          <div class="hidden md:block">
+            <p
+              class="text-gray-900 font-bold text-sm leading-tight uppercase tracking-tighter"
+            >
+              Fawaz - XI TKJ B
+            </p>
+          </div>
         </div>
         <div
-          class="h-2 w-2 rounded-full bg-cyan-500 animate-pulse shadow-[0_0_10px_#22d3ee]"
-        ></div>
+          class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-[0.2em]"
+        >
+          <a
+            href="#biodata"
+            class="nav-link text-gray-600 hover:text-gray-900 transition-all"
+            >Biodata</a
+          >
+          <a
+            href="#about"
+            class="nav-link text-gray-600 hover:text-gray-900 transition-all"
+            >About</a
+          >
+          <a
+            href="#pendahuluan"
+            class="nav-link text-gray-600 hover:text-gray-900 transition-all"
+            >Pendahuluan</a
+          >
+          <a
+            href="#kompetensi"
+            class="nav-link text-gray-600 hover:text-gray-900 transition-all"
+            >Kompetensi</a
+          >
+          <a
+            href="#iduka"
+            class="nav-link text-gray-600 hover:text-gray-900 transition-all"
+            >IDUKA</a
+          >
+          <a
+            href="#dokumentasi"
+            class="nav-link text-gray-600 hover:text-gray-900 transition-all"
+            >Dokumentasi</a
+          >
+        </div>
       </div>
     </nav>
 
-    <!-- Header / Hero -->
+    <!-- Header / Hero Section -->
     <header
-      class="relative min-h-screen flex flex-col items-center justify-center pt-32 px-6"
+      class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-br from-gray-950 via-gray-900 to-black"
     >
-      <div class="text-center mb-12">
-        <h1
-          class="text-5xl md:text-7xl font-extrabold text-white mb-4 glitch"
-          data-text="PKL REPORT 2026"
-        >
-          PKL REPORT 2026
-        </h1>
-        <p class="text-cyan-400 font-mono tracking-[0.3em] uppercase text-sm">
-          Network Traffic Analyst & Independent Security Researcher
-        </p>
-      </div>
+      <!-- Efek Background: Grid & Glow dengan glass effect -->
+      <div class="absolute inset-0 cyber-grid opacity-30"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-gray-800/20 via-transparent to-black/40 backdrop-blur-sm"
+      ></div>
+      <div
+        class="absolute top-1/4 -left-20 w-96 h-96 bg-gray-700/30 rounded-full blur-3xl backdrop-blur-md"
+      ></div>
+      <div
+        class="absolute bottom-1/4 -right-20 w-96 h-96 bg-gray-600/20 rounded-full blur-3xl backdrop-blur-md"
+      ></div>
 
-      <!-- Space Terminal (Nmap, Nuclei, WPScan) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-7xl mb-20">
-        <div
-          class="terminal-window glass border border-white/10 rounded-lg overflow-hidden shadow-2xl"
-        >
-          <div
-            class="bg-white/5 px-4 py-2 flex gap-2 items-center border-b border-white/10"
-          >
-            <div class="w-2 h-2 rounded-full bg-red-500"></div>
-            <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
-            <div class="w-2 h-2 rounded-full bg-green-500"></div>
-            <span class="text-[9px] font-mono ml-2 text-slate-500 italic"
-              >nmap_scan.sh</span
+      <div
+        class="relative max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center"
+      >
+        <!-- Kolom Kiri: Teks -->
+        <div class="space-y-6 md:text-left text-center">
+          <div class="space-y-2">
+            <h2
+              class="text-gray-400 font-mono text-sm tracking-[0.4em] uppercase"
             >
+              Laporan Praktik Kerja Lapangan
+            </h2>
+            <h1
+              class="text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter"
+            >
+              TEFA
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-200"
+                >SMKN 8</span
+              >
+              MALANG
+            </h1>
           </div>
-          <div
-            class="p-4 font-mono text-[10px] leading-relaxed min-h-[150px]"
-            id="terminal-nmap"
-          ></div>
+
+          <p
+            class="text-gray-400 font-light max-w-lg leading-relaxed text-sm md:text-base"
+          >
+            Laporan Praktik Kerja Lapangan (PKL),
+            <span class="text-gray-300 font-semibold italic text-lg"
+              >Dokumentasi Keagiatan
+            </span>
+            oleh
+            <span class="text-white border-b border-gray-500"
+              >Fawaz Musa Thalib</span
+            >.
+          </p>
         </div>
-        <div
-          class="terminal-window glass border border-white/10 rounded-lg overflow-hidden shadow-2xl"
-        >
+
+        <!-- Kolom Kanan: Terminal (Sekarang lebih keren) -->
+        <div class="hidden md:block relative">
           <div
-            class="bg-white/5 px-4 py-2 flex gap-2 items-center border-b border-white/10"
-          >
-            <div class="w-2 h-2 rounded-full bg-red-500"></div>
-            <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
-            <div class="w-2 h-2 rounded-full bg-green-500"></div>
-            <span class="text-[9px] font-mono ml-2 text-slate-500 italic"
-              >nuclei_engine.exe</span
-            >
-          </div>
-          <div
-            class="p-4 font-mono text-[10px] leading-relaxed min-h-[150px]"
-            id="terminal-nuclei"
+            class="absolute -inset-1 bg-gradient-to-r from-gray-700/50 to-gray-600/30 rounded-2xl blur opacity-30 animate-pulse"
           ></div>
-        </div>
-        <div
-          class="terminal-window glass border border-white/10 rounded-lg overflow-hidden shadow-2xl"
-        >
           <div
-            class="bg-white/5 px-4 py-2 flex gap-2 items-center border-b border-white/10"
+            class="relative bg-gray-950/80 backdrop-blur-lg border-2 border-gray-900/50 rounded-2xl overflow-hidden shadow-2xl"
           >
-            <div class="w-2 h-2 rounded-full bg-red-500"></div>
-            <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
-            <div class="w-2 h-2 rounded-full bg-green-500"></div>
-            <span class="text-[9px] font-mono ml-2 text-slate-500 italic"
-              >wpscan_local.sh</span
+            <div
+              class="bg-gray-900/50 px-4 py-3 flex justify-between items-center border-b border-gray-800/50"
             >
+              <div class="flex gap-2">
+                <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+              </div>
+              <span
+                class="text-[10px] font-mono text-gray-500 tracking-widest uppercase"
+                >system_monitor.sh</span
+              >
+            </div>
+            <div class="p-6 font-mono text-[11px] space-y-2">
+              <div class="flex gap-3 text-gray-700">
+                <span>></span>
+                <span class="text-white"
+                  >Initializing network protocols...</span
+                >
+              </div>
+              <div class="flex gap-3 text-gray-500">
+                <span>></span>
+                <span>Status: <span class="text-green-500">SECURE</span></span>
+              </div>
+              <div
+                class="flex gap-3 text-gray-500 border-l-2 border-gray-900/30 pl-3 ml-1"
+              >
+                <span>IP Address: 192.168.80.XXX</span>
+              </div>
+              <div
+                class="flex gap-3 text-gray-500 border-l-2 border-gray-900/30 pl-3 ml-1"
+              >
+                <span>Subnet: 255.255.255.0</span>
+              </div>
+              <div
+                class="flex gap-3 text-gray-500 border-l-2 border-gray-900/30 pl-3 ml-1 uppercase italic text-gray-700"
+              >
+                <span>Analyzing traffic logs...</span>
+              </div>
+              <div
+                id="terminal-nmap"
+                class="text-gray-400/80 leading-relaxed pt-2"
+              ></div>
+            </div>
           </div>
+          <!-- Floated Badge -->
           <div
-            class="p-4 font-mono text-[10px] leading-relaxed min-h-[150px]"
-            id="terminal-wpscan"
-          ></div>
+            class="absolute -bottom-6 -left-6 bg-gradient-to-br from-gray-800 to-gray-900 backdrop-blur-md p-4 rounded-xl shadow-xl animate-bounce border-2 border-gray-900/50"
+          >
+            <i class="fa-solid fa-ethernet text-white text-2xl"></i>
+          </div>
         </div>
       </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 space-y-32 pb-32">
-      <!-- Tentang Website & Tujuan Pembuatan -->
-      <section id="about" class="grid md:grid-cols-2 gap-8">
-        <div class="glass p-10 rounded-3xl border border-white/10">
-          <h2
-            class="text-2xl font-bold text-white mb-6 border-l-4 border-cyan-500 pl-4"
-          >
-            Tentang Website
-          </h2>
-          <p class="text-sm leading-relaxed text-slate-400">
-            Website ini dibuat sebagai media dokumentasi lengkap kegiatan
-            Praktik Kerja Lapangan (PKL) yang merupakan program wajib bagi siswa
-            SMK untuk mendapatkan pengalaman langsung di dunia industri. Melalui
-            website ini, saya mendokumentasikan perjalanan, pembelajaran, dan
-            pengalaman selama menjalani PKL di bidang
-            <span class="text-cyan-400">Cyber Security</span> dan
-            <span class="text-cyan-400">Teknologi Informasi</span>.
-          </p>
-        </div>
-        <div class="glass p-10 rounded-3xl border border-white/10">
-          <h2
-            class="text-2xl font-bold text-white mb-6 border-l-4 border-cyan-500 pl-4"
-          >
-            Tujuan Pembuatan
-          </h2>
-          <ul class="space-y-4 text-sm">
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-caret-right text-cyan-500 mt-1"></i>
-              Mendokumentasikan kegiatan PKL secara sistematis
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-caret-right text-cyan-500 mt-1"></i>
-              Menampilkan kompetensi yang telah dikuasai
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-caret-right text-cyan-500 mt-1"></i>
-              Memenuhi syarat laporan PKL format digital
-            </li>
-          </ul>
-        </div>
-      </section>
+    <main class="w-full bg-white">
+      >
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-6 space-y-12 md:space-y-32 py-12 md:py-32"
+      >
+        <!-- Profil IDUKA (Layout: Foto Kiri, Teks Kanan) -->
+        <section id="iduka" class="grid md:grid-cols-2 gap-6 md:gap-12">
+          <!-- Space Foto di Samping Profil (Kiri) -->
+          <div class="grid grid-rows-2 gap-4 h-auto md:h-[550px]">
+            <div
+              class="rounded-2xl md:rounded-3xl border border-gray-300 overflow-hidden relative group shadow-md"
+            >
+              <img
+                src="/assets/rakserver-2.jpg"
+                alt="Server Rack 2"
+                class="w-full h-48 md:h-full object-cover object-top group-hover:scale-110 transition duration-700"
+              />
+            </div>
+            <div
+              class="rounded-2xl md:rounded-3xl border border-gray-300 overflow-hidden relative group shadow-md"
+            >
+              <img
+                src="/assets/rak_server.jpeg"
+                alt="Server Rack 1"
+                class="w-full h-48 md:h-full object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+          </div>
 
-      <!-- Latar Belakang & Manfaat -->
-      <section id="pendahuluan" class="space-y-8">
-        <div
-          class="glass p-12 rounded-[40px] border border-white/5 relative overflow-hidden"
+          <!-- Teks Profil (Kanan) -->
+          <div
+            class="space-y-6 md:space-y-8 flex flex-col justify-between h-auto md:h-[550px]"
+          >
+            <div>
+              <h2
+                class="text-2xl md:text-3xl font-black text-gray-900 uppercase italic tracking-tighter border-b-2 border-gray-900 inline-block pb-2 mb-6"
+              >
+                Profil IDUKA
+              </h2>
+              <div
+                class="text-sm md:text-base leading-relaxed text-gray-700 space-y-6"
+              >
+                <div>
+                  <strong>Alamat:</strong> Jl. Teluk Pacitan, Arjosari, Kec.
+                  Blimbing, Kota Malang, Jawa Timur 65126
+                </div>
+                <div><strong>Bidang:</strong> Network Administrator</div>
+                <div>
+                  <strong>Deskripsi:</strong> SMKN 8 Malang menerapkan sistem
+                  pembelajaran vokasi berbasis TEFA yang mensimulasikan
+                  lingkungan kerja industri asli. Melalui program ini, siswa
+                  menjalani PKL di berbagai perusahaan mitra strategis untuk
+                  mengasah kemampuan teknis dan soft skills sesuai standar mutu
+                  nyata. Kolaborasi langsung dengan praktisi profesional ini
+                  dirancang agar setiap lulusan memiliki pengalaman praktis yang
+                  relevan. Komitmen tersebut menjadikan institusi ini pilihan
+                  utama dalam mencetak lulusan yang siap kerja dan berkarakter
+                  kuat.
+                </div>
+              </div>
+            </div>
+            <div
+              class="p-6 bg-white border-l-4 border-gray-900 rounded-r-2xl md:rounded-r-3xl"
+            >
+              <p class="text-sm italic text-gray-700">
+                "Menghasilkan lulusan yang siap bersaing di era transformasi
+                digital dengan standar industri global."
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- BIODATA SECTION -->
+        <section
+          id="biodata"
+          class="grid md:grid-cols-2 gap-6 md:gap-12 items-center"
         >
-          <div
-            class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-[100px] rounded-full"
-          ></div>
-          <h2
-            class="text-3xl font-black text-white mb-8 uppercase italic tracking-tighter"
-          >
-            Latar Belakang
-          </h2>
-          <p class="text-sm leading-relaxed text-slate-400 max-w-4xl">
-            Praktik Kerja Lapangan (PKL) merupakan salah satu program pendidikan
-            yang diterapkan di Sekolah Menengah Kejuruan (SMK) untuk memberikan
-            pengalaman nyata kepada siswa dalam dunia kerja profesional. Program
-            ini bertujuan untuk menjembatani kesenjangan antara teori yang
-            dipelajari di kelas dengan praktik di lapangan kerja yang
-            sesungguhnya. Berdasarkan Peraturan Menteri Pendidikan dan
-            Kebudayaan, PKL wajib dilaksanakan minimal 3-6 bulan.
-          </p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="glass p-8 rounded-3xl border border-white/5">
-            <h3 class="text-lg font-bold text-white mb-6 uppercase">
-              Tujuan PKL
-            </h3>
-            <ul class="space-y-4 text-sm">
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-caret-right text-cyan-500 mt-1"></i>
-                <span>Mengaplikasikan teori ke praktik nyata</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-caret-right text-cyan-500 mt-1"></i>
-                <span>Mengembangkan kompetensi teknis</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-caret-right text-cyan-500 mt-1"></i>
-                <span>Memahami budaya kerja industri</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-caret-right text-cyan-500 mt-1"></i>
-                <span>Meningkatkan soft skills</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-caret-right text-cyan-500 mt-1"></i>
-                <span>Mempersiapkan mental kerja</span>
-              </li>
-            </ul>
-          </div>
-          <div class="glass p-8 rounded-3xl border border-white/5">
-            <h3 class="text-lg font-bold text-white mb-6 uppercase">
-              Manfaat PKL
-            </h3>
-            <ul class="space-y-4 text-sm">
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-caret-right text-cyan-500 mt-1"></i>
-                <span>Pengalaman kerja real-world</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-caret-right text-cyan-500 mt-1"></i>
-                <span>Peningkatan keterampilan praktis</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-caret-right text-cyan-500 mt-1"></i>
-                <span>Pemahaman standar industri</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-caret-right text-cyan-500 mt-1"></i>
-                <span>Portfolio untuk karir</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-caret-right text-cyan-500 mt-1"></i>
-                <span>Koneksi dengan praktisi</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+          <!-- Kolom Kiri: Deskripsi -->
+          <div class="space-y-4 flex flex-col justify-start">
+            <div>
+              <h2
+                class="text-2xl md:text-3xl font-black text-gray-900 mb-4 md:mb-6"
+              >
+                Tentang
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-500"
+                  >Saya</span
+                >
+              </h2>
 
-      <!-- KOMPETENSI (Blue Icon Edition) -->
-      <section id="kompetensi" class="text-center">
-        <h2 class="text-4xl font-extrabold text-white mb-2 uppercase">
-          Kompetensi
-        </h2>
-        <div
-          class="w-20 h-1 bg-cyan-500 mx-auto mb-16 shadow-[0_0_10px_#22d3ee]"
-        ></div>
+              <div class="space-y-3 text-gray-700 leading-relaxed">
+                <p class="text-sm md:text-base">
+                  Halo! Saya
+                  <span class="font-bold text-gray-900">Fawaz Musa Thalib</span
+                  >, siswa kelas
+                  <span class="font-bold text-gray-900">XI TKJ B</span> di
+                  <span class="font-bold text-gray-900">SMKN 8 Malang</span>.
+                  Portofolio ini merupakan dokumentasi perjalanan Praktik Kerja
+                  Lapangan (PKL) saya selama
+                  <span class="font-bold text-gray-900">6 bulan</span> di
+                  <span class="font-bold text-gray-700">TEFA SMKN 8 Malang</span
+                  >.
+                </p>
 
-        <div class="grid grid-cols-2 md:grid-cols-6 gap-6">
-          <div
-            class="glass p-8 rounded-2xl group border border-white/5 hover:border-cyan-500/50 transition"
-          >
-            <i
-              class="fa-solid fa-bug text-4xl text-cyan-500 mb-4 block group-hover:scale-110 transition"
-            ></i>
-            <span class="text-[10px] font-bold text-slate-400 uppercase"
-              >Bug Bounty</span
-            >
+                <p class="text-sm md:text-base">
+                  Selama PKL, saya mendapatkan pengalaman nyata di bidang
+                  <span class="font-bold text-gray-900"
+                    >Teknik Komputer dan Jaringan</span
+                  >, mulai dari konfigurasi jaringan, perawatan perangkat keras,
+                  hingga pengelolaan sistem server. Pengalaman ini sangat
+                  berharga dalam membentuk kompetensi saya sebagai calon tenaga
+                  ahli IT.
+                </p>
+              </div>
+            </div>
           </div>
-          <div
-            class="glass p-8 rounded-2xl group border border-white/5 hover:border-cyan-500/50 transition"
-          >
-            <i
-              class="fa-solid fa-magnifying-glass text-4xl text-cyan-500 mb-4 block group-hover:scale-110 transition"
-            ></i>
-            <span class="text-[10px] font-bold text-slate-400 uppercase"
-              >Forensic</span
-            >
-          </div>
-          <div
-            class="glass p-8 rounded-2xl group border border-white/5 hover:border-cyan-500/50 transition"
-          >
-            <i
-              class="fa-solid fa-lock text-4xl text-cyan-500 mb-4 block group-hover:scale-110 transition"
-            ></i>
-            <span class="text-[10px] font-bold text-slate-400 uppercase"
-              >Crypto</span
-            >
-          </div>
-          <div
-            class="glass p-8 rounded-2xl group border border-white/5 hover:border-cyan-500/50 transition"
-          >
-            <i
-              class="fa-brands fa-linux text-4xl text-cyan-500 mb-4 block group-hover:scale-110 transition"
-            ></i>
-            <span class="text-[10px] font-bold text-slate-400 uppercase"
-              >Kali Linux</span
-            >
-          </div>
-          <div
-            class="glass p-8 rounded-2xl group border border-white/5 hover:border-cyan-500/50 transition"
-          >
-            <i
-              class="fa-solid fa-flag text-4xl text-cyan-500 mb-4 block group-hover:scale-110 transition"
-            ></i>
-            <span class="text-[10px] font-bold text-slate-400 uppercase"
-              >CTF</span
-            >
-          </div>
-          <div
-            class="glass p-8 rounded-2xl group border border-white/5 hover:border-cyan-500/50 transition"
-          >
-            <i
-              class="fa-brands fa-python text-4xl text-cyan-500 mb-4 block group-hover:scale-110 transition"
-            ></i>
-            <span class="text-[10px] font-bold text-slate-400 uppercase"
-              >Python</span
-            >
-          </div>
-        </div>
-      </section>
 
-      <!-- Profil IDUKA (Layout: Foto Kiri, Teks Kanan) -->
-      <section id="iduka" class="grid md:grid-cols-2 gap-12">
-        <!-- Space Foto di Samping Profil (Kiri) -->
-        <div class="grid grid-rows-2 gap-4 h-[550px]">
-          <div
-            class="glass rounded-3xl border border-white/10 overflow-hidden relative group"
-          >
-            <img
-              src="assets/rakserver-2.jpg"
-              alt="Server Rack 2"
-              class="w-full h-full object-cover object-top group-hover:scale-110 transition duration-700"
-            />
+          <!-- Kolom Kanan: Foto -->
+          <div class="space-y-4 flex flex-col items-center md:items-end">
             <div
-              class="absolute inset-0 bg-cyan-900/20 mix-blend-overlay"
-            ></div>
-          </div>
-          <div
-            class="glass rounded-3xl border border-white/10 overflow-hidden relative group"
-          >
-            <img
-              src="assets/rak_server.jpeg"
-              alt="Server Rack 1"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-            />
-            <div
-              class="absolute inset-0 bg-cyan-900/20 mix-blend-overlay"
-            ></div>
-          </div>
-        </div>
+              class="text-xs md:text-sm font-bold uppercase tracking-widest text-gray-700"
+            >
+              01 — TENTANG SAYA
+            </div>
 
-        <!-- Teks Profil (Kanan) -->
-        <div class="space-y-8 flex flex-col justify-between h-[550px]">
-          <div>
+            <!-- Foto Bundar -->
+            <div
+              class="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-4 border-gray-900 shadow-lg flex-shrink-0 bg-white"
+            >
+              <img
+                src="/assets/fawa.jpeg"
+                alt="Fawaz Musa Thalib"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Latar Belakang & Manfaat -->
+        <section id="pendahuluan" class="space-y-8">
+          <div
+            class="bg-gradient-to-r from-white to-white p-8 md:p-12 rounded-3xl md:rounded-[40px] border-2 border-gray-900 relative overflow-hidden"
+          >
             <h2
-              class="text-3xl font-black text-white uppercase italic tracking-tighter border-b-2 border-cyan-500 inline-block pb-2 mb-6"
+              class="text-2xl md:text-3xl font-black text-gray-900 mb-8 uppercase italic tracking-tighter"
             >
-              Profil IDUKA
+              Latar Belakang
             </h2>
-            <p class="text-base leading-relaxed text-slate-300">
-              <span class="text-white font-bold">SMKN 8 Malang</span> menerapkan
-              sistem pembelajaran vokasi yang mengedepankan kolaborasi dengan
-              dunia industri melalui program TEFA. Dalam TEFA, sekolah
-              menyediakan fasilitas dan lingkungan pembelajaran yang menyerupai
-              kondisi kerja di industri, agar siswa bisa terbiasa dengan standar
-              mutu dan praktik nyata lapangan. Selain itu, PKL sebagai bagian
-              dari TEFA memberikan siswa pengalaman langsung bekerja di
-              perusahaan mitra sesuai jurusan mereka, untuk mengasah kemampuan
-              teknis serta soft skills. Program ini dirancang untuk memastikan
-              bahwa setiap lulusan tidak hanya memiliki teori yang kuat, tetapi
-              juga pengalaman praktis yang relevan dengan industri. Melalui
-              kemitraan strategis dengan berbagai perusahaan terkemuka, SMKN 8
-              Malang membuka peluang bagi siswa untuk belajar langsung dari
-              praktisi profesional dan memahami dinamika dunia kerja. Komitmen
-              terhadap keunggulan akademis dan pengembangan karakter membuat
-              institusi ini menjadi pilihan utama bagi siswa yang ingin
-              mempersiapkan masa depan karir yang cerah dan berkelanjutan.
+            <p class="text-sm leading-relaxed text-gray-700 max-w-4xl">
+              Praktik Kerja Lapangan (PKL) merupakan salah satu program
+              pendidikan yang diterapkan di Sekolah Menengah Kejuruan (SMK)
+              untuk memberikan pengalaman nyata kepada siswa dalam dunia kerja
+              profesional. Program ini bertujuan untuk menjembatani kesenjangan
+              antara teori yang dipelajari di kelas dengan praktik di lapangan
+              kerja yang sesungguhnya. Berdasarkan Peraturan Menteri Pendidikan
+              dan Kebudayaan, PKL wajib dilaksanakan minimal 3-6 bulan.
             </p>
           </div>
-          <div class="p-6 glass border-l-4 border-cyan-500 rounded-r-3xl">
-            <p class="text-sm italic text-cyan-100">
-              "Menghasilkan lulusan yang siap bersaing di era transformasi
-              digital dengan standar industri global."
+          <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+            <div
+              class="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl border-2 border-gray-900"
+            >
+              <h3
+                class="text-base md:text-lg font-bold text-gray-900 mb-6 uppercase"
+              >
+                Tujuan PKL
+              </h3>
+              <ul class="space-y-3 md:space-y-4 text-sm">
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-caret-right text-gray-400 mt-1 flex-shrink-0"
+                  ></i>
+                  <span class="text-gray-700"
+                    >Mengaplikasikan teori ke praktik nyata</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-caret-right text-gray-400 mt-1 flex-shrink-0"
+                  ></i>
+                  <span class="text-gray-700"
+                    >Mengembangkan kompetensi teknis</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-caret-right text-gray-400 mt-1 flex-shrink-0"
+                  ></i>
+                  <span class="text-gray-700"
+                    >Memahami budaya kerja industri</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-caret-right text-gray-400 mt-1 flex-shrink-0"
+                  ></i>
+                  <span class="text-gray-700">Meningkatkan soft skills</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-caret-right text-gray-400 mt-1 flex-shrink-0"
+                  ></i>
+                  <span class="text-gray-700">Mempersiapkan mental kerja</span>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl border-2 border-gray-900"
+            >
+              <h3
+                class="text-base md:text-lg font-bold text-gray-900 mb-6 uppercase"
+              >
+                Manfaat PKL
+              </h3>
+              <ul class="space-y-3 md:space-y-4 text-sm">
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-caret-right text-gray-400 mt-1 flex-shrink-0"
+                  ></i>
+                  <span class="text-gray-700">Pengalaman kerja real-world</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-caret-right text-gray-400 mt-1 flex-shrink-0"
+                  ></i>
+                  <span class="text-gray-700"
+                    >Peningkatan keterampilan praktis</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-caret-right text-gray-400 mt-1 flex-shrink-0"
+                  ></i>
+                  <span class="text-gray-700">Pemahaman standar industri</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-caret-right text-gray-400 mt-1 flex-shrink-0"
+                  ></i>
+                  <span class="text-gray-700">Portfolio untuk karir</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-caret-right text-gray-400 mt-1 flex-shrink-0"
+                  ></i>
+                  <span class="text-gray-700">Koneksi dengan praktisi</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Kegiatan Selama PKL - Timeline -->
+        <section id="about" class="space-y-8">
+          <div
+            class="bg-gradient-to-r from-white to-white p-8 md:p-12 rounded-3xl md:rounded-[40px] border-2 border-gray-900 relative overflow-hidden"
+          >
+            <h2
+              class="text-2xl md:text-3xl font-black text-gray-900 mb-12 uppercase tracking-widest"
+            >
+              Kegiatan Selama PKL
+            </h2>
+
+            <!-- Timeline Container -->
+            <div class="space-y-8 relative">
+              <!-- Timeline Line -->
+              <div
+                class="absolute left-6 md:left-8 top-0 bottom-0 w-1 bg-gray-900"
+              ></div>
+
+              <!-- Bulan 1 -->
+              <div class="pl-20 md:pl-24 relative">
+                <div
+                  class="absolute left-0 md:left-0 top-2 w-4 h-4 md:w-5 md:h-5 bg-gray-900 rounded-full border-4 border-white"
+                ></div>
+                <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                  Bulan 1-2
+                </h3>
+                <p class="text-sm md:text-base leading-relaxed text-gray-700">
+                  Memasuki bulan pertama PKL, saya memulai dengan pengenalan
+                  mendalam terhadap infrastruktur TEFA SMKN 8 Malang. Saya
+                  diperkenalkan dengan perangkat networking utama seperti
+                  switch, router, dan server. Tetapi kegiatan yang saya sering
+                  lakukan dari bulan pertama sampai kedua yaitu bermain CTF
+                  (Capture The Flag) untuk melatih kemampuan cybersecurity saya
+                  dan menguasai command linux dasar. Saya juga mengganti
+                  beberapa hardware seperti poe yang rusak agar jaringan sekolah
+                  tetap stabil.
+                </p>
+              </div>
+
+              <!-- Bulan 2 -->
+              <div class="pl-20 md:pl-24 relative">
+                <div
+                  class="absolute left-0 md:left-0 top-2 w-4 h-4 md:w-5 md:h-5 bg-gray-900 rounded-full border-4 border-white"
+                ></div>
+                <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                  Bulan 3-4
+                </h3>
+                <p class="text-sm md:text-base leading-relaxed text-gray-700">
+                  Bulan ketiga sampai ke empat, saya fokus pada praktik
+                  konfigurasi lebih lanjut. Saya belajar mengonfigurasi Cisco,
+                  mempelajari VLAN, dan memahami juga basic mikrotik, pada bulan
+                  ketiga dan empat saya terkadadang mempunyai tugas hardware
+                  seperti memperbaiki pc all in one dengan teman pkl saya jefri
+                  dan juga memperbaiki laptop yang install ulang atau ada
+                  masalah troubleshooting lainnya.
+                </p>
+              </div>
+
+              <!-- Bulan 3 -->
+              <div class="pl-20 md:pl-24 relative">
+                <div
+                  class="absolute left-0 md:left-0 top-2 w-4 h-4 md:w-5 md:h-5 bg-gray-900 rounded-full border-4 border-white"
+                ></div>
+                <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                  Bulan 5-6
+                </h3>
+                <p class="text-sm md:text-base leading-relaxed text-gray-700">
+                  Pada bulan kelima sampai keenam, saya lebih di fokuskan ke
+                  configurasi mikrotik dan monitoring jaringan sekolah.
+                  pengetahuan saya berkembang ke level troubleshooting dasar.
+                  Saya belajar mengidentifikasi dan mengatasi masalah
+                  konektivitas jaringan, melakukan monitoring jaringan
+                  menggunakan mikrotik dan riujie , serta mempelajari bagaimana
+                  cara firewall bekerja untuk memblokir hal yang tidak di
+                  inginkan agar server sekolah tidak memakan cpu lebih banyak
+                  dan traffict yang berlebihan. Selain itu saya sempat ikut
+                  membantu guru pkl saya untuk merealisasikan jaringan hotspot
+                  di sekolah agar gampang untuk di monitoring.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- MONITORING JARINGAN -->
+        <section id="kompetensi" class="space-y-12">
+          <!-- Main Title -->
+          <div class="text-center mb-12">
+            <h2
+              class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2 uppercase"
+            >
+              Kompetensi
+            </h2>
+            <div
+              class="w-20 md:w-28 h-1 bg-gray-600 mx-auto mb-8 shadow-lg"
+            ></div>
+          </div>
+
+          <!-- Subtitle -->
+          <div class="space-y-8">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 uppercase">
+              Monitoring Jaringan
+            </h3>
+          </div>
+
+          <!-- Border Container untuk semua steps -->
+          <div
+            class="border-4 border-gray-900 rounded-3xl p-8 md:p-12 space-y-12"
+          >
+            <!-- Step 1: Text Kiri, Gambar & Input Kanan -->
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+              <!-- Text Kiri -->
+              <div class="space-y-4">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+                  Step 1: Torch Interface Yang Digunakan Siswa
+                </h3>
+                <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+                  Langkah pertama dalam monitoring jaringan adalah
+                  mengidentifikasi interface yang digunakan oleh siswa. Dengan
+                  menggunakan tool seperti Torch Yang ada di Winbox, kita dapat
+                  melihat semua interface yang aktif dan traffic yang melaluinya
+                  secara real-time.
+                </p>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                  <p class="text-xs md:text-sm text-gray-600 font-mono">
+                    Interface yang terdeteksi akan ditampilkan dengan detail
+                    bandwidth usage
+                  </p>
+                </div>
+              </div>
+
+              <!-- Gambar & Input Kanan -->
+              <div class="space-y-4">
+                <div
+                  class="bg-white border-2 border-gray-900 rounded-2xl overflow-hidden h-48 md:h-64 flex items-center justify-center relative group"
+                >
+                  <img
+                    id="img-step-1"
+                    src="/assets/mikrotik.png"
+                    alt="Gambar Step 1"
+                    class="w-full h-full object-contain"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"
+                  >
+                    <p class="text-white text-sm font-semibold">
+                      Klik untuk ganti gambar
+                    </p>
+                  </div>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Catat interface yang digunakan..."
+                  class="w-full p-3 border border-gray-300 rounded-lg focus:border-gray-900 focus:outline-none text-sm"
+                />
+              </div>
+            </div>
+
+            <!-- Step 2: Gambar & Input Kiri, Text Kanan -->
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+              <!-- Gambar & Input Kiri -->
+              <div class="space-y-4">
+                <div
+                  class="bg-white border-2 border-gray-900 rounded-2xl overflow-hidden h-48 md:h-64 flex items-center justify-center relative group"
+                >
+                  <img
+                    id="img-step-2"
+                    src="/assets/poe.jpeg"
+                    alt="Gambar Step 2"
+                    class="w-full h-full object-contain"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"
+                  >
+                    <p class="text-white text-sm font-semibold">
+                      Klik untuk ganti gambar
+                    </p>
+                  </div>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Catat IP dengan traffic ≥ 50 Mbps..."
+                  class="w-full p-3 border border-gray-300 rounded-lg focus:border-gray-900 focus:outline-none text-sm"
+                />
+              </div>
+
+              <!-- Text Kanan -->
+              <div class="space-y-4">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+                  Step 2: Catat IP dengan Traffic Tinggi
+                </h3>
+                <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+                  Setelah interface diidentifikasi, kita memantau traffic yang
+                  melewati setiap interface. Jika ada traffic yang menggunakan
+                  bandwidth minimal 50 Mbps, kita perlu mencatat IP address yang
+                  melakukan traffic tersebut untuk dianalisis lebih lanjut.
+                </p>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                  <p class="text-xs md:text-sm text-gray-600 font-mono">
+                    IP yang dicurigai akan disimpan untuk proses investigasi
+                    selanjutnya
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Text Kiri, Gambar & Input Kanan -->
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+              <!-- Text Kiri -->
+              <div class="space-y-4">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+                  Step 3: Search IP di Rujie Cloud
+                </h3>
+                <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+                  Setelah mengidentifikasi IP yang mencurigakan, masuk ke panel
+                  Rujie Cloud bagian Client Management. Di sini kita dapat
+                  search IP tersebut untuk melihat informasi detail tentang
+                  device, user, dan aktivitas yang terkait dengan IP tersebut.
+                </p>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                  <p class="text-xs md:text-sm text-gray-600 font-mono">
+                    Data device dan user terkait akan ditampilkan untuk
+                    verifikasi
+                  </p>
+                </div>
+              </div>
+
+              <!-- Gambar & Input Kanan -->
+              <div class="space-y-4">
+                <div
+                  class="bg-white border-2 border-gray-900 rounded-2xl overflow-hidden h-48 md:h-64 flex items-center justify-center relative group"
+                >
+                  <img
+                    id="img-step-3"
+                    src="/assets/search-ip.png"
+                    alt="Gambar Step 3"
+                    class="w-full h-full object-contain"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"
+                  >
+                    <p class="text-white text-sm font-semibold">
+                      Klik untuk ganti gambar
+                    </p>
+                  </div>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Informasi device dari Rujie Cloud..."
+                  class="w-full p-3 border border-gray-300 rounded-lg focus:border-gray-900 focus:outline-none text-sm"
+                />
+              </div>
+            </div>
+
+            <!-- Step 4: Gambar & Input Kiri, Text Kanan -->
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+              <!-- Gambar & Input Kiri -->
+              <div class="space-y-4">
+                <div
+                  class="bg-white border-2 border-gray-900 rounded-2xl overflow-hidden h-48 md:h-64 flex items-center justify-center relative group"
+                >
+                  <img
+                    id="img-step-4"
+                    src="/assets/blok.png"
+                    alt="Gambar Step 4"
+                    class="w-full h-full object-contain"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"
+                  >
+                    <p class="text-white text-sm font-semibold">
+                      Klik untuk ganti gambar
+                    </p>
+                  </div>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Tindakan pemblokiran yang dilakukan..."
+                  class="w-full p-3 border border-gray-300 rounded-lg focus:border-gray-900 focus:outline-none text-sm"
+                />
+              </div>
+
+              <!-- Text Kanan -->
+              <div class="space-y-4">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+                  Step 4: Blok IP Tersebut
+                </h3>
+                <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+                  Setelah melakukan investigasi dan memastikan bahwa traffic
+                  tersebut tidak diinginkan atau melanggar kebijakan jaringan,
+                  IP dapat diblok melalui firewall atau access control list
+                  (ACL). Pemblokiran ini akan mencegah IP tersebut untuk
+                  melakukan komunikasi dengan jaringan sekolah.
+                </p>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                  <p class="text-xs md:text-sm text-gray-600 font-mono">
+                    IP telah diblok untuk melindungi stabilitas jaringan sekolah
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quote Final -->
+        <section class="py-12 md:py-20 flex justify-center">
+          <div
+            class="bg-gradient-to-r from-white to-white p-10 md:p-16 rounded-3xl md:rounded-[50px] border-2 border-gray-900 text-center max-w-4xl relative overflow-hidden group"
+          >
+            <h2
+              class="text-2xl md:text-5xl font-black text-gray-900 italic leading-tight mb-8"
+            >
+              "The only way to do great work is to love what you do."
+            </h2>
+            <p
+              class="text-gray-600 font-mono tracking-[0.5em] text-xs uppercase"
+            >
+              - Steve Jobs
             </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Kesan & Pesan -->
-      <section class="space-y-8">
-        <div class="glass p-12 rounded-[40px] border border-white/10">
-          <h2
-            class="text-2xl font-bold text-white mb-6 uppercase tracking-widest text-cyan-400"
-          >
-            Kesan Selama PKL
-          </h2>
-          <p class="text-base leading-relaxed text-slate-300 italic max-w-2xl">
-            "Praktik Kerja Lapangan (PKL) merupakan pengalaman yang sangat
-            berharga bagi saya. Melalui program ini, saya mendapatkan kesempatan
-            untuk menerapkan ilmu yang telah dipelajari di sekolah ke dalam
-            dunia kerja nyata. Lingkungan kerja yang profesional dan pembimbing
-            yang berpengalaman memberikan banyak pembelajaran berharga."
-          </p>
-        </div>
+        <!-- DOKUMENTASI (Paling Bawah) -->
+        <section id="dokumentasi" class="space-y-8 md:space-y-12">
+          <div class="text-center">
+            <h2
+              class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 uppercase tracking-tighter"
+            >
+              Dokumentasi Kegiatan
+            </h2>
+            <p class="text-xs text-gray-500 tracking-[0.3em] uppercase">
+              Visual Report Archive
+            </p>
+          </div>
 
-        <div class="glass p-12 rounded-[40px] border border-white/10">
-          <h2
-            class="text-2xl font-bold text-white mb-8 uppercase tracking-widest text-cyan-400"
-          >
-            Pesan
-          </h2>
-          <div class="grid md:grid-cols-2 gap-8">
-            <div>
-              <p class="text-lg font-bold text-cyan-400 mb-3">Untuk Sekolah:</p>
-              <p class="text-base leading-relaxed text-slate-300">
-                Terima kasih atas kesempatan PKL. Program ini sangat membantu
-                mempersiapkan siswa menghadapi dunia kerja. Semoga ke depannya
-                dapat terus meningkatkan kualitas pembelajaran dan memberikan
-                pengalaman yang lebih bermakna bagi siswa-siswa selanjutnya.
-              </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <!-- Row 1 -->
+            <div
+              class="rounded-2xl md:rounded-3xl border border-gray-300 group overflow-hidden shadow-md hover:shadow-lg transition relative"
+            >
+              <img
+                src="/assets/all_in_one-pc.jpeg"
+                class="w-full aspect-[9/16] object-cover rounded-2xl md:rounded-3xl transition duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white text-center font-bold text-sm md:text-base"
+              >
+                Kegiatan Konfigurasi Jaringan
+              </div>
             </div>
-            <div>
-              <p class="text-lg font-bold text-cyan-400 mb-3">
-                Untuk Tempat PKL:
-              </p>
-              <p class="text-base leading-relaxed text-slate-300">
-                Terima kasih atas bimbingan dan ilmu yang diberikan selama PKL.
-                Lingkungan kerja yang kondusif dan profesional sangat membantu
-                proses pembelajaran. Kesempatan untuk belajar langsung dari
-                praktisi berpengalaman telah membuka wawasan saya tentang
-                industri.
-              </p>
+            <div
+              class="rounded-2xl md:rounded-3xl border border-gray-300 group overflow-hidden shadow-md hover:shadow-lg transition relative"
+            >
+              <img
+                src="/assets/poe.jpeg"
+                class="w-full aspect-[9/16] object-cover rounded-2xl md:rounded-3xl transition duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white text-center font-bold text-sm md:text-base"
+              >
+                Perawatan Hardware
+              </div>
             </div>
-            <div>
-              <p class="text-lg font-bold text-cyan-400 mb-3">
-                Untuk Teman-teman PKL:
-              </p>
-              <p class="text-base leading-relaxed text-slate-300">
-                Mari terus berkembang dan saling mendukung. Pengalaman PKL ini
-                adalah awal dari perjalanan karir kita semua. Tetaplah semangat,
-                disiplin, dan terus berinovasi dalam menghadapi tantangan
-                industri di masa depan.
-              </p>
+            <div
+              class="rounded-2xl md:rounded-3xl border border-gray-300 group overflow-hidden shadow-md hover:shadow-lg transition relative"
+            >
+              <img
+                src="/assets/kali-linux.jpeg"
+                class="w-full aspect-[9/16] object-cover rounded-2xl md:rounded-3xl transition duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white text-center font-bold text-sm md:text-base"
+              >
+                Analisis Keamanan
+              </div>
             </div>
-            <div>
-              <p class="text-lg font-bold text-cyan-400 mb-3">
-                Untuk Diri Sendiri:
-              </p>
-              <p class="text-base leading-relaxed text-slate-300">
-                Terus tingkatkan kemampuan dan jangan pernah puas dengan
-                pencapaian saat ini. Dunia teknologi terus berkembang, dan kamu
-                harus terus belajar untuk tetap relevan. Jadikan pengalaman PKL
-                ini sebagai fondasi untuk meraih kesuksesan di masa depan yang
-                lebih cerah.
-              </p>
+            <!-- Row 2 -->
+            <div
+              class="rounded-2xl md:rounded-3xl border border-gray-300 group overflow-hidden shadow-md hover:shadow-lg transition relative"
+            >
+              <img
+                src="/assets/sd_mu9.jpeg"
+                class="w-full aspect-[9/16] object-cover rounded-2xl md:rounded-3xl transition duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white text-center font-bold text-sm md:text-base"
+              >
+                Maintenance Jaringan SD MU 9 Malang
+              </div>
+            </div>
+            <div
+              class="rounded-2xl md:rounded-3xl border border-gray-300 group overflow-hidden shadow-md hover:shadow-lg transition relative bg-white"
+            >
+              <img
+                src="/assets/mikrotik.png"
+                class="w-full aspect-[16/9] object-contain rounded-2xl md:rounded-3xl transition duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white text-center font-bold text-sm md:text-base"
+              >
+                Setting Mikrotik
+              </div>
+            </div>
+            <div
+              class="rounded-2xl md:rounded-3xl border border-gray-300 group overflow-hidden shadow-md hover:shadow-lg transition relative"
+            >
+              <img
+                src="/assets/rame2.jpeg"
+                class="w-full aspect-[9/16] object-cover rounded-2xl md:rounded-3xl transition duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white text-center font-bold text-sm md:text-base"
+              >
+                Memasang Anten
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Quote Final -->
-      <section class="py-20 flex justify-center">
-        <div
-          class="glass p-16 rounded-[50px] border border-cyan-500/30 text-center max-w-4xl relative overflow-hidden group"
-        >
-          <div
-            class="absolute inset-0 bg-cyan-500/5 opacity-0 group-hover:opacity-100 transition duration-700"
-          ></div>
-          <h2
-            class="text-3xl md:text-5xl font-black text-white italic leading-tight mb-8"
-          >
-            "The only way to do great work is to love what you do."
-          </h2>
-          <p class="text-cyan-500 font-mono tracking-[0.5em] text-xs uppercase">
-            - Steve Jobs
-          </p>
-        </div>
-      </section>
-
-      <!-- DOKUMENTASI (Paling Bawah) -->
-      <section id="dokumentasi" class="space-y-12">
-        <div class="text-center">
-          <h2
-            class="text-4xl font-extrabold text-white mb-2 uppercase tracking-tighter"
-          >
-            Dokumentasi Kegiatan
-          </h2>
-          <p class="text-xs text-slate-500 tracking-[0.3em] uppercase">
-            Visual Report Archive
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Row 1 -->
-          <div
-            class="glass-gallery p-2 rounded-3xl border border-white/10 group overflow-hidden"
-          >
-            <img
-              src="assets/all_in_one-pc.jpeg"
-              class="w-full h-64 object-cover rounded-2xl transition duration-500 group-hover:scale-105"
-            />
-          </div>
-          <div
-            class="glass-gallery p-2 rounded-3xl border border-white/10 group overflow-hidden"
-          >
-            <img
-              src="assets/poe.jpeg"
-              class="w-full h-64 object-cover rounded-2xl transition duration-500 group-hover:scale-105"
-            />
-          </div>
-          <div
-            class="glass-gallery p-2 rounded-3xl border border-white/10 group overflow-hidden"
-          >
-            <img
-              src="assets/kali-linux.jpeg"
-              class="w-full h-64 object-cover rounded-2xl transition duration-500 group-hover:scale-105"
-            />
-          </div>
-          <!-- Row 2 -->
-          <div
-            class="glass-gallery p-2 rounded-3xl border border-white/10 group overflow-hidden"
-          >
-            <img
-              src="assets/sd_mu9.jpeg"
-              class="w-full h-64 object-cover rounded-2xl transition duration-500 group-hover:scale-105"
-            />
-          </div>
-          <div
-            class="glass-gallery p-2 rounded-3xl border border-white/10 group overflow-hidden"
-          >
-            <img
-              src="assets/mikrotik.png"
-              class="w-full h-64 object-cover rounded-2xl transition duration-500 group-hover:scale-105"
-            />
-          </div>
-          <div
-            class="glass-gallery p-2 rounded-3xl border border-white/10 group overflow-hidden"
-          >
-            <img
-              src="doc6.jpg"
-              class="w-full h-64 object-cover rounded-2xl transition duration-500 group-hover:scale-105"
-            />
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
-    <footer class="py-12 border-t border-white/5 text-center">
+    <footer
+      class="w-full bg-white border-t border-gray-300 py-8 md:py-12 text-center"
+    >
       <div class="flex justify-center gap-6 mb-6">
-        <a
-          href="#"
-          class="text-slate-500 hover:text-cyan-400 transition text-xl"
+        <a href="#" class="text-gray-600 hover:text-gray-900 transition text-xl"
           ><i class="fa-brands fa-instagram"></i
         ></a>
-        <a
-          href="#"
-          class="text-slate-500 hover:text-cyan-400 transition text-xl"
+        <a href="#" class="text-gray-600 hover:text-gray-900 transition text-xl"
           ><i class="fa-brands fa-github"></i
         ></a>
-        <a
-          href="#"
-          class="text-slate-500 hover:text-cyan-400 transition text-xl"
+        <a href="#" class="text-gray-600 hover:text-gray-900 transition text-xl"
           ><i class="fa-solid fa-envelope"></i
         ></a>
       </div>
-      <p class="text-[10px] text-slate-600 font-mono tracking-widest uppercase">
-        &copy; 2026 Fawaz | XI TKJ B
+      <p class="text-[10px] text-gray-500 font-mono tracking-widest uppercase">
+        &copy; 2024 YourName | SMKN 8 MALANG
       </p>
     </footer>
 
